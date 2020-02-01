@@ -1,1 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "ordenacao.h"
 
+int const TAM = 5;
+int menu(){
+int opcao;
+printf("\n0. Sair.");
+printf("\n1. Inserir elementos.");
+printf("\n2. Ordenar elementos por insertion sort/insercao direta.");
+printf("\n3. Ordernar os elementos por shell sort.");
+printf("\n4. Ordernar os elementos por bubble sort/bolha.");
+printf("\n5. Ordernar elementos por selection sort.");
+printf("\n6. Ordernar elementos por bucket sort.");
+printf("\n7. Ordernar elementos por couting sort.");
+printf("\n8. Ordernar elementos por radix sort.");
+printf("\nEscolha a opcao: ");
+scanf("%d", &opcao);
+return opcao;
+}
+int main() {
+    int opcao, A[50], dado, n, i;
+do{
+    opcao = menu();
+    switch (opcao){
+        case 1:
+            printf("\nQuantos elementor serao inseridos?");
+            scanf("%d", n);
+            for(i=0; i<n; i++){
+                printf("\nInsira o elemento: ");
+                scanf("%d", dado);
+                A[i]=dado;
+            }
+            break;
+        case 2:
+            //n sei como implementar no main
+            break;
+    }
+
+
+    }while(opcao);
+    return 0;
+}
