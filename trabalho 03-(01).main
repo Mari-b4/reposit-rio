@@ -15,7 +15,7 @@ return opcao;
 }
 int main() {
     int opcao;
-    char dado[50];
+    char dado[50], n;
     tabela *T = inicializar_tabela(TAM);
 do{
     opcao = menu();
@@ -28,6 +28,22 @@ do{
             printf("\nTabela:\n");
             mostrar(T);
             break;
+        case 3://n sei qq to fazendo
+            printf("\n Qual o nome procurado? ");
+            scanf("%s", &n);
+            buscar(T, & n);
+            if(buscar){
+                printf("\nElemento encontrado.");
+            }
+            else{
+                printf("\nElemento nao encontrado.");
+            }
+            break;
+        case 4:
+            break;
+    }
+
+
     }
 
 
