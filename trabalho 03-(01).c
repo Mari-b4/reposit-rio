@@ -67,19 +67,24 @@ void mostrar(tabela *T){
     }
 }
 
-int buscar(tabela *T, char*){
+
+int buscar(tabela *T, char* n){//n sei qq to fazendo
     lista *aux;
-    int i;
-    while(T->L[i].nome!=n){
-        aux= T->L[i].nome;
+    int i, h = n[0];
+    for (i = 0; n[i] != '\0'; i++)
+          h = (h * 251 + n[i]) % T->tamanho;
+    aux=T->L[h].prox;
+    while(T->L[h].nome!=n){
         while(aux!=NULL){
             aux=aux->prox;
         }
-    i ++;
+        i ++;
     }
     if(aux=T->L[i].nome[50]=n){
         printf("%d", i);
         printf("%s", aux->nome);
-    }
 
+    }
+    return 1;
 }
+
