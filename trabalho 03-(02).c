@@ -2,6 +2,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+struct tipo_lista{
+	int dado;
+	struct tipo_lista *proximo;
+};
+
+listaSimples *criar(){
+	return NULL;
+}
+
 void ordenar_insercao(int A[], int tamanho){
     int i, chave, j;
     for (j=1; j<tamanho; j++){
@@ -61,11 +70,34 @@ void ordenar_selecao(int A[], int tamanho){
     }
 }
 
-void bucket_sort(int A[]){
+void bucket_sort(int A[]){//tentando adicionar lista simples pra esse, mas n sei do que preciso ex:liberar, inserir fim
     int B[], i;
     n= sizeof(A);
     for(i=1, i < n-1, i++){
         B[i]
     }
-    
+   //nao terminado
 }
+
+void counting-sort(int A[], int B[], int k){//n sei se ta certo
+    int n,j, i, C[];
+    n=sizeof(A);
+    for(i=0; i<k; i++){
+        C[i]=0;
+    }
+    for(j=1; j<n; j++){
+        C[A[j]]=C[A[j]]+1;
+    }
+    for(i=1; i<k; i++){
+        C[i]=C[i]+C[i+1];
+    }
+    for(j=n; j>1; j++){
+        B[C[A[j]]]=A[j];
+        C[A[j]]=C[A[j]];
+    }
+}
+
+radix-sort(int A[], int d){
+    //no slide ta escrito "usar uma ordenaçao estavel para ordernar o arranjo A sobre o digito 1 (geralmente, a ordenaçao por contagem é utilizada
+}
+
