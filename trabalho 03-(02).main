@@ -14,6 +14,7 @@ printf("\n5. Ordernar elementos por selection sort.");
 printf("\n6. Ordernar elementos por bucket sort.");
 printf("\n7. Ordernar elementos por couting sort.");
 printf("\n8. Ordernar elementos por radix sort.");
+//eh bom fazer funcao eliminar elemento?
 printf("\nEscolha a opcao: ");
 scanf("%d", &opcao);
 return opcao;
