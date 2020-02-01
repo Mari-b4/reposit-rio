@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1580585383 source:c:\users\janaina\desktop\reposit-rio\trabalho03ex1\hash_encadeada.c
+	"hash_encadeada.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1580585469 c:\users\janaina\desktop\reposit-rio\trabalho03ex1\hash_encadeada.h
+
