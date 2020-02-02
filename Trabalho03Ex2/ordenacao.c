@@ -6,8 +6,7 @@
 void mostrar(int V[], int tamanho)
 {
     int i;
-    for(i=0; i<tamanho; i++)
-    {
+    for(i=0; i<tamanho; i++){
         printf("%d ", V[i]);
     }
 }
@@ -25,10 +24,10 @@ void insertion_sort(int V[], int tamanho)
         }
         V[i+1]= chave;
     }
-    mostrar(V[], tamanho);
+    mostrar(V, tamanho);
 }
 
-void *shell_sort(int V[], int tam)
+void shell_sort(int V[], int tam)
 {
     int h = tam / 2;
     int chave, j, i;
@@ -36,20 +35,21 @@ void *shell_sort(int V[], int tam)
     {
         for(j = h; j < tam; j=j+h)
         {
-            chave = v[j];
+            chave = V[j];
             i = j;
-            while(i >= h && v[i - h] > chave)
+            while(i >= h && V[i - h] > chave)
             {
-                v[i] = v[i - h];
+                V[i] = V[i - h];
                 i = i - h;
             }
-            v[i] = chave;
+            V[i] = chave;
         }
         h = h / 2;
     }
+    mostrar(V, tam);
 }
 
-void *bubble_sort(int V[], int tam)
+void bubble_sort(int V[], int tam)
 {
     int aux, i, j;
     for(i=0; i<tam; i++){
@@ -61,10 +61,10 @@ void *bubble_sort(int V[], int tam)
             }
         }
     }
-    mostrar(V, tam)
+    mostrar(V, tam);
 }
 
-void *selection_sort(int V[], int tamanho)
+void selection_sort(int V[], int tamanho)
 {
     int i, j, chave, menor, pos;
     for (i=0; i<tamanho-1; i++){
@@ -82,11 +82,11 @@ void *selection_sort(int V[], int tamanho)
           V[i]= chave;
         }
     }
-    mostrar(V[], tamanho);
+    mostrar(V, tamanho);
 }
 
-void *counting_sort(int V[], int B[], int tamanho){
-    int n, j, i, C[];
+void counting_sort(int V[], int B[], int tamanho){
+    int n, j, i, C[tamanho];
     n = sizeof(V);
     for(i=0; i<tamanho; i++){
         C[i]=0;
@@ -96,7 +96,7 @@ void *counting_sort(int V[], int B[], int tamanho){
         C[V[j]]=C[V[j]]+1;
     }
 
-    for(i=1; i<k; i++){
+    for(i=1; i<tamanho; i++){
         C[i]=C[i]+C[i-1];
     }
 
@@ -104,4 +104,5 @@ void *counting_sort(int V[], int B[], int tamanho){
         B[C[V[j]]]=V[j];
         C[V[j]]=C[V[j]];
     }
+    mostrar(V, tamanho);
 }

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1580604192 source:c:\users\janaina\desktop\reposit-rio\trabalho03ex2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ordenacao.h"
+
+1580604137 c:\users\janaina\desktop\reposit-rio\trabalho03ex2\ordenacao.h
+
+1580604316 source:c:\users\janaina\desktop\reposit-rio\trabalho03ex2\ordenacao.c
+	"ordenacao.h"
+	<stdio.h>
+	<stdlib.h>
+
