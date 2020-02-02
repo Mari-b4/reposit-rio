@@ -4,20 +4,14 @@
 struct tipo_lista lista;
 
 //funcoes exportadas
-lista* criar(int tam);
-void liberar(lista* L); //libera a memoria ocupada pela lista
-void inicializar(lista* L);
-void inserir_inicio(lista* L, int valor);
-void mostrar(lista* L);
-void inserir_fim(lista* L, int valor);
+void *preencher(int *V[], int tamanho);
+void mostrar(int *V[], int tamanho)
 
-void ordenar_insercao(int A[], int tamanho);
-void ordenar_shellsort(int v[], int tam);
-void ordenar_bolha(int A[], int tam);
-void bucket_sort(int A[]);
-void ordenar_selecao(int A[], int tamanho);
-void bucket_sort(int A[]);
-void counting-sort(int A[], int B[], int k);
-radix-sort(int A[], int d);
+void insertion_sort(int V[], int tamanho);
+void shell_sort(int V[], int tamanho);
+void bubble_sort(int V[], int tamanho);
+void selection_sort(int V[], int tamanho);
+void bucket_sort(int V[], int tamanho);
+void counting_sort(int V[], int B[], int k);
 
 #endif // ORDENACAO_H_INCLUDED
